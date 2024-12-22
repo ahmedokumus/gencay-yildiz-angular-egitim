@@ -1,84 +1,66 @@
-<h1>ANGULAR YAPI TAŞLARI</h1>
+<h1>Components</h1>
 <ul>
-  <li>Modules</li>
-  <li>Components</li>
-  <li>Data Binding</li>
-  <li>Dependency Injection</li>
-  <li>Directives</li>
-  <li>Decorators</li>
-  <li>Services</li>
-  <li>Templates</li>
-  <li>Pipes</li>
+  <li>Angular uygulamalarında component'ler uygulamanın mühim parçası olan yapılanmalarından biridir.</li>
+  <li>Genellikle angular uygulamasında component'lerin görevi sayfa altyapıları olarak kullanılmalarıdır. Bunun dışında
+    sayfa olarak kullanılan coponent'lerin alt component'leri olarakta kullanılabilmektedir ve böylece partial
+    mantığında sayfaları geliştirmemize imkan verir.</li>
 </ul>
-
-<h2>Modules</h2>
-<ul>
-  <li>Angular mimarisinde module yapılanması uygulama öğelerinin gruplandırılmasını sağlamaktadır. Böylece uygulama daha
-    düzenli bir şekilde inşa edilir.</li>
-  <li>Modüller, uygulamanın çeşitli parçalarını(components, services vs.) bir araya getirerek bir bütün olarak
-    kullanılabilir kılmaktadır</li>
-</ul>
-
-<h2>Components</h2>
-<ul>
-  <li>Component'ler uygulamanın bütün işlevsel operasyonlarının temel operasyonlarının merkezini ifade eder.</li>
-  <li>Yapısal olarak birer HTML ve TypeScript dosyalarından oluşmaktadır.</li>
-</ul>
-
-<h2>Data Binding</h2>
-<ul>
-  <li>Angular mimarisi, Data Binding özelliği sayesinde veri modeli ile template'ler arasında veri akışını dinamik bir
-    şekilde sağlayabilmektedir.</li>
-</ul>
-
-<h2>Directives</h2>
-<ul>
-  <li>HTML nesnelerinin davranışlarını ve görünümlerini yönetmemizi sağlayan özel etiketlerdir.</li>
-</ul>
-
-<h2>Decorators</h2>
-<ul>
-  <li>Decorator sayesinde bir class'a veya bir class member'ına -metadata- ekleyebilmekteyiz. Böylece ilgili yapının
-    davranışı hakkında bir öntanımda bulunabiliriz.</li>
-</ul>
-
-<h2>Services</h2>
+<h2>Component'in Bileşenleri Nelerdir?</h2>
 <ul>
   <li>
-    Angular'da genellikler dış servislerler(API - endpoint) iletişim kurmak, karmaşık iş operasyonlarını veya
-    business
-    logic'i yürütmek yahut componentler arasında iletişim sağlayabilmek için kullanılan fiili yapılardır
+    <strong>Template</strong>
+    <ul>
+      <li>Component'in görsel çalışmalarının yapıldığı parçasıdır.</li>
+      <li>İçerisinde HTML kodunun eşliğinde directive ve pipe gibi özel angular elemanları ve Data Binding davranışları
+        kullanılabilmektedir.</li>
+      <ul>
+        <li>{{title}}</li>
+        <li>{{3 | currency}}</li>
+      </ul>
+      <li>Componentler'i .html dosyasına karşılık gelmektedir ve component ile 'templateUrl' field'ı üzerinden
+        ilişkilendirilmektedir.</li>
+      <li>Eğer ki teplate işlemlerini fiziksel olarak ayrı bir dosyada gerçekleştirmek yerine .ts dosyası içerisinde
+        gerçekleştirmek istiyorusak 'template' field'ına karşılıkta çalışma yapabiliriz</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Style</strong>
+    <ul>
+      <li>Component'in css, scss vs. gibi hangi style türü seçildiyse ilgili çalışmaların yapıldığı tasarım parçasıdır.
+      </li>
+      <li>steylesUrl fieldı üzerinden component ile ilişkilendirilir.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Component Class</strong>
+    <ul>
+      <li>Component'in merkezi ve esas unsurudur.</li>
+      <li>Tüm JavaScript, TypeScript ve jQuery işlemleri bu parça üzerinde gerçekleçtirilir ve component içerisinde
+        kullanılacak değişkenlerle birlikte fonksiyonlar bu sınıf üzerinde tanımlanır.</li>
+      <li>Verilerin nasıl görüntüleneceği, fonksiyonların nasıl işleyeceği vs. gibi işlevsellikler bu sınıf tarafından
+        yönetilir.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Selector</strong>
+    <ul>
+      <li>Component'in selector özelliği, ilgili component'in uygulamanın herhangi bir noktasında nasıl çalışacağını
+        tanımlayan bir referans özelliğidir.</li>
+      <li>
+        Sadece HTML dosyasında kullanılan bir etiket ile component'in çalıştırılmasını sağlar.
+      </li>
+      <li><app-home></app-home></li>
+      <li>selector sayesinde home component'i yukarıda çağırdık</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Meta Data</strong>
+    <ul>
+      <li>Component'in nasıl yapılandırılacağını ve nasıl kullanılacağını tanımlayan bir decorator'dur</li>
+    </ul>
   </li>
 </ul>
-
-<h2>Templates</h2>
-<ul>
-  <li>
-    Componentlerin HTML kısmıdır. İçerisinde HTML kodları barındırabileceği gibi özel Angular elemanları, directive'ler,
-    pipe'lar vs. barındırabilir ve bunları işlevlerine göre çalıştırabilir.
-  </li>
-  <li>
-    Data Binding özelliğini desteklemekte ve böylece veri modelleriyle dinamik şekildeetkileşime girebilmektedir.
-  </li>
-</ul>
-
-<h2>Guards</h2>
-<ul>
-  <li>
-    Angular uygulamasında route erişimlerini izin kontrolleri Guard yapılanması üzerinden gerçekleştirilmektedir.
-  </li>
-  <li>
-    Sayfalar arası geçiş süreçlerinde ilgili kullanıcının erişimine izin verilip verilmeyeceğine dair karar veren
-    yapılardır.
-  </li>
-  <li>
-    Böylece Angular uygulamasının güvenliği ve yetkilendirme işlemleri Guard yapıları ile sağlanmaktadır.
-  </li>
-</ul>
-
-<h2>Pipes</h2>
-<ul>
-  <li>verilerin görüntülenme süreçlerinde işlenmesine yönelik işlevsellik sağlayan yapılardır.</li>
-  <li>Misal olarak; bir verinin tarihsel veya parasal biçime dönüştürülmesi pipe'lar sayesinde gerçekleştirilmektedir
-  </li>
-</ul>
+<h2>Component Oluşturma</h2>
+<p>ng generate/g component/c [componante name]</p>
+<h2>Oluşturulan Component'in Uygulamada Kullanılabilir Olması İçin Nereye Tanımlanması Gerekiyor</h2>
+<p>Ana Modülün declaration'una</p>
