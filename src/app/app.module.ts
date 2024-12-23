@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { InterpolationSyntaxComponent } from './interpolation-syntax/interpolation-syntax.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DataBindingComponent],
+  declarations: [AppComponent, HomeComponent, DataBindingComponent, InterpolationSyntaxComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

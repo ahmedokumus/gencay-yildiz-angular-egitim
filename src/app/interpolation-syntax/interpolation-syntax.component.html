@@ -1,0 +1,34 @@
+<p>interpolation-syntax works!</p>
+
+<h2>Interpolation Syntax Nedir?</h2>
+<p ngNonBindable>Angular'da Component Class'ı içerisindeki herhangi bir field yahut property'nin değerini {{}}
+    operatörü aracılığıyla HTML içerisinde kullanılmasına Text Interpolation Syntax denir. </p>
+<p>Interpolation, One-Way(Tek Yönlü) Data Binding gerçekleştirmektedir.</p>
+
+<h2>Interpolation'da Neler Kullanılmaz</h2>
+<p>Interpolation, yapısal olarak sadece field veya property değerini okumak ve böylece template yansıtmak için
+    kullanılır. Bundan dolayı uygulamanın durumunu(state) değiştirecek herhangi bir işlem gerçekleştirememektedir.</p>
+<p>Bu mantıkla işlem neticesinde state değişikliğine sebebiyet verebilecek aşağıdaki operatörler, keywordler ve işlemler
+    interpolation ile birlikte kullanılamaz.</p>
+<ul>
+    <li>Assing operatörü (+=, =, -=)</li>
+    <li>new, Typeof, Instanceof vs. keywordler</li>
+    <li>; operatörü</li>
+    <li>arttırma (++), azaltma(--) operatörleri</li>
+    <li>Bitwise operatörler</li>
+</ul>
+
+<h2>Interpolation da HTML ve Script kodları çalıştırılamaz</h2>
+<p>Örnek: {{test}} gibi</p>
+
+<h2>ngNonBindable Nedir?</h2>
+<p>Interpolation operatörünün compile edilmemesini istediğimiz noktalarda bu özelliği devreye sokabiliriz</p>
+<p>Örnek: <span ngNonBindable>{{test}}</span></p>
+
+<h2>Interpolation ile Kullanılan Operatörler</h2>
+<p>Angular'da Interpolation ile ekstradan da aşağıdaki yapıları kullanabilirsiniz?</p>
+<ul>
+    <li>Pipes</li>
+    <li>Nullable operatörü(?)</li>
+    <li>Non-Null Assertion operatörü(!)</li>
+</ul>
