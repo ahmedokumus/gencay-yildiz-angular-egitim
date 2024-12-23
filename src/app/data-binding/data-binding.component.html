@@ -1,0 +1,54 @@
+<h1>data-binding works!</h1>
+
+<h2>Binding Nedir?</h2>
+<p>Angular'da binding kavramı, Component Class'ında bulunan bir mmodelin veya fonksiyonun template'deki bir alan yahut
+    DOM nesnesi ile canlı olarak bağlantı oluşturmasını ifade eden bir kavramdır.</p>
+<ul>
+    <li>Text Interpolations</li>
+    <li>Property Binding</li>
+    <li>Event Binding</li>
+    <li>Two-Way Binding</li>
+    <li>Attirbute Binding</li>
+    <li>Class Binding</li>
+    <li>Style Binding</li>
+</ul>
+
+<br>
+
+<h3>Text Interpolation</h3>
+<p>Template içerisinde, Component Class'ı içerisinde tanımlı olan bir field/property değerinin yazdırılması için
+    kullanılan Binding yöntemidir.</p>
+<p>Örnek: {{text}}</p>
+
+<h3>Property Binding</h3>
+<p>Template içerisindeki HTML nesneleri veya directive'ler için Component Class'ında tanımlı olan verilerin property
+    olarak direkt bağlanmasını sağlayan bir yöntemdir.</p>
+<p>Örnek: <input [value]="property" type="text"></p>
+<p>Bu yöntem sayesinde değer atamaları daha dinamik bir şekilde gerçekleştirilmektedir.</p>
+<p>Ek olarak selector ile referans edilen component'lerin içerisindeki input property'lere de Property Binding üzerinden
+    değer atanabilmektedir.</p>
+<p><app-home [pageName]="property"></app-home></p>
+
+<h3>Event Binding</h3>
+<p>Template içerisindeki herhangi bir DOM nesnesinin, Component Class'ı içerisinde tanımlı olan bir fonksiyona event
+    olarak bağlanmasıdır.</p>
+
+<h3>Two-Way Binding</h3>
+<p>Template içerisindeki bir template nesnesinin değeri değiştiğinde o nesne ile bind edilmiş olan Component Class'ı
+    içerisindeki field/property değeriinin anlık olarak değiştirilmesini ve aynı zamanda tam tersi durumda geçerli
+    olmasını sağlayan durumdur
+</p>
+<p>Örnek;</p>
+<p><input type="text" [(ngModel)]="twoWay" (ngModelChange)="updateTwoWayCount()"> {{twoWayCount}}</p>
+<p>HTML nesneleri ile Two-Way Data Binding gerçekleştirebilmek için "[(ngModel)]" direktifi kullanılır. (Ana modülde
+    "FormsModule'nin" import edilmesi lazım.)</p>
+<h3>Attribute Binding</h3>
+<p>HTML elemanlarının attribute'ları için değerleri doğrudan Component Class içerisinden verilebilmesini sağlayan
+    yöntemdir.</p>
+<h3>Style and Class Binding</h3>
+<p>Bir HTML öğesine CSS ile ilgili style veya class bildirilerinde bulunmak için kullanılan yöntemdir.</p>
+
+<h3>CHANGE DETECTİON ALGORİTMASI</h3>
+<p>Template'de bir event tetiklendiğinde yajut kullanıcı eylemi neticesinde bir modelin verisi değiştiğinde Component
+    Class'ını bilgilendirmek ve Template ile senkronizasyonu sağlayabilmek için Change Detection algoritması
+    kullanılmaktadır.</p>
