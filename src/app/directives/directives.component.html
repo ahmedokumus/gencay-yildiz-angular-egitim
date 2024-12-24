@@ -1,0 +1,76 @@
+<h1>directives works!</h1>
+
+<h2>Directives Nedir?</h2>
+<p>HTML elemanlarına ekstra özellikler ve davranışlar eklemek için kullanılan özel etiketlerdir.</p>
+
+<h2>Directives Nasıl Kullanılır?</h2>
+<p>İster hazır olsun ister custom, bir directive'in kullanımı aşağıdaki gibidir.</p>
+<p>Örnek: </p>
+
+<h2>Built-in/Hazır/Ön Tanımlı Directive'ler Nelerdir?</h2>
+<p>Custom directive'leri geliştirmeden önce mimari tarafından bizlere sunulan ve belirli işlemlere odaklı davranışlar
+    sergileyen directive'leri incelemekte fayda vardır. Bu directive'ler şunlardır;</p>
+<ul>
+    <li>ngFor</li>
+    <li>ngSwitch</li>
+    <li>ngIf</li>
+    <li>ngClass</li>
+    <li>ngStyle</li>
+    <li>ngModel</li>
+    <li>ngNonBindable</li>
+</ul>
+
+<h2>ngFor Directive</h2>
+<p>HTML nesneleri üzerinde iterasyonel işlemler yapmak için kullanılan directive'dir. Örnek Çalışma;</p>
+<ul>
+    <li *ngFor="let ngFor of ngFors">{{ngFor}}</li>
+</ul>
+<p>Verilen array/ veri kümesi içerisindeki eleman sayısı kadar ilgili HTML nesnesini repeat edecektir(tekrarlayacaktır).
+</p>
+<p>Ayrıca istendiği takdirde aşağıdaki gibi kullanarakta her bir elemanın index değeri de hızlıca elde edilebilir.</p>
+<ul>
+    <li *ngFor="let ngFor of ngFors;index as index">{{ngFor}} - {{index}}</li>
+</ul>
+<p>Veya <span style="color: red;">index, first, last, even ve odd</span> keywordleri eşliğinde ngFor directive'ini daha
+    da karmaşık kullanabilirsiniz. Örnek Çalışma;
+</p>
+<ul>
+    <li>veri - index - isFirst(ilk mi?) - isLast(son mu?) - isEven(çift mi?) - isOdd(tek mi?)</li>
+    <li *ngFor="let ngFor of ngFors; let index = index;
+                                     let isFirst = first;
+                                     let isLast = last;
+                                     let isEven = even;
+                                     let isOdd = odd">
+        {{ngFor}} - {{index}} - {{isFirst}} - {{isLast}} - {{isEven}} - {{isOdd}}
+    </li>
+</ul>
+
+<h2>ngIf Directive</h2>
+<p>Verilen koşula göre HTML nesnelerinin görünürlüğünü kontrol etmek için kullanılan temel bir angular directive'dir.
+    Örnek Çalışma;
+</p>
+<p *ngIf="visible ; else visibleFalse">Burası ngIf kullanılan ve visible'nin true olduğu bir çalımadır</p>
+<ng-template #visibleFalse>
+    <p>Burası visible'nin false olduğu ng-template çalışmasıdır.</p>
+</ng-template>
+<p>ngIf directive'inde else/if mantığında davranış doğrudan sergilenemez.</p>
+
+<h2>ngSwitch</h2>
+<p>Verilen koşula göre HTML nesnelerinin görünürlüğünü veya içeriğini değiştirmek için kullanılan temel bir
+    directive'dir. Örnek Çalışma;</p>
+<ul [ngSwitch]="sayi">
+    <li *ngSwitchCase="1">sayı 1</li>
+    <li *ngSwitchCase="2">sayı 2</li>
+    <li *ngSwitchCase="3">sayı 3</li>
+    <li *ngSwitchDefault>Hiçbiri</li>
+</ul>
+
+<h2>ngClass Directive</h2>
+<p>HTML etiketlerinin class değerini dinamik olarak yönetebilmemizi sağlayan directive'dir. Örnek Çalışma;</p>
+
+<h2>ngStyle Directive</h2>
+<p>HTML etiketlerinin style değerlerini dinamik olarak yönetebilmemizi sağlayan directive'dir. Örnek Çalışma;</p>
+<p [ngStyle]="style">Burası örnek çalışma</p>
+
+<h2>ngModel & ngNonBindable</h2>
+<p>ngModel Directive: Form nesnelerinde Two-Way Data Binding çalışma yapabilmemizi sağlayan directive'dir</p>
