@@ -14,4 +14,6 @@ export class DirectivesComponent {
     color: 'white',
     'font-size': '18px',
   };
+
+  names: string[] = ['Ali', 'Veli', 'Deli', 'Mehmet', 'Ayşe', 'Fatma'];
 }

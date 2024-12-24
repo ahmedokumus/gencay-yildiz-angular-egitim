@@ -9,9 +9,12 @@ import { FormsModule } from '@angular/forms';
 import { InterpolationSyntaxComponent } from './interpolation-syntax/interpolation-syntax.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ExampleDirective } from './custom-directives/example.directive';
+import { StructuralExampleDirective } from './custom-directives/structural-example.directive';
+import { CustomIfDirective } from './custom-directives/custom-if.directive';
+import { CustomForDirective } from './custom-directives/custom-for.directive';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DataBindingComponent, InterpolationSyntaxComponent, DirectivesComponent, ExampleDirective],
+  declarations: [AppComponent, HomeComponent, DataBindingComponent, InterpolationSyntaxComponent, DirectivesComponent, ExampleDirective, StructuralExampleDirective, CustomIfDirective, CustomForDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

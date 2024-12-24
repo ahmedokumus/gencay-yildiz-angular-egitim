@@ -75,7 +75,59 @@
 <h2>ngModel & ngNonBindable</h2>
 <p>ngModel Directive: Form nesnelerinde Two-Way Data Binding çalışma yapabilmemizi sağlayan directive'dir</p>
 
-<h1>CUSTOM DİRECTİVES</h1>
+<h1 style="text-align: end">CUSTOM DİRECTİVES</h1>
 <p appExample color="blue">Custom Example Örnek Çalışması.</p>
 
-<hr>
+<h1 style="text-align: end">STRUCTURAL DİRECTİVES</h1>
+<h2>Structural Directive Nedir?</h2>
+<p>HTML nesnesini ve DOM yapısını fiziksel olarak manipüle ederek sayfa üzerinde değişiklikler yapmamızı sağlayan
+    directive türüdür.</p>
+<p>Structural Directive'ler "<strong>*</strong>" karakteri ile çağırılmalıdır.</p>
+<p>Normal Directive'ler ve Structural Directive'ler arasındaki farklar;</p>
+<ul>
+    <li>
+        <p><strong>Structural Directive'ler</strong> HTML şablonundaki DOM elemanlarının görünümünü fiziksel olarak
+            değiştirerek template'in
+            yapısını değiştirebilirler.</p>
+    </li>
+    <li>
+        <p><strong>Normal Directive'ler</strong> ise HMTL şablonundaki DOM elemanlarının görünümünü değiştirmez, sadece
+            ekstra özellikler
+            eklerler/değiştirler/silerler.</p>
+    </li>
+</ul>
+<p>Structural Directive'ler de <strong>TemplateRef</strong> ve <strong>ViewContainerRef</strong> olmak üzere iki modül
+    ile karşılamaktadır.</p>
+<ul>
+    <li><strong>TemplateRef:</strong>
+        <span> Directive'in kullanıldığı template'i temsil eder.</span>
+    </li>
+    <li><strong>ViewContainerRef:</strong>
+        <span>Angular'da bir template'in içeriğini içeren container'ın referansı'dır. Bu container içerisinden dinamik
+            olarak HTML elemanları eklemeye veya çıkarmaya yarar. İleride bir component'in dinamik olarak yüklenmesini
+            sağladığınıda görüyor olacağız.</span>
+    </li>
+</ul>
+
+<h2>If şartı için Custom Structural Directive Oluşturma</h2>
+
+<p *appCustomIf="true">Structural Example Örnek Çalışması. True ise görünecek, False ise görünmeyecek.</p>
+<p *appCustomIf="false">False olduğu için örnek çalışma görünmüyor.</p>
+
+<h2>İterasyonel Davranış İçin Custom Directive Oluşturma</h2>
+<!-- Calisma 1 -->
+<!-- <ul>
+    <li *appCustomFor="5">Örnek Çalışma</li>
+</ul>
+
+<h2>Custom Structural Directive İçerisinden Değer Döndürme</h2>
+<ul>
+    <li *appCustomFor="5; let i = index">Örnek Çalışma - {{i+1}}</li>
+</ul> -->
+
+<p>Eğer ki directive'i kullanırken değerleri otomatik olarak karşılmak isterseniz $implicit operatörünü
+    kullanabilirsiniz.</p>
+<!-- Calisma 2 -->
+<ul>
+    <li *appCustomFor="names; let name; let index = index">{{index+1}} - {{name}}</li>
+</ul>
