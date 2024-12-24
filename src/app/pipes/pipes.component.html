@@ -1,0 +1,57 @@
+<h1>pipes works!</h1>
+
+<h2>Pipes Nedir</h2>
+<p>Bir verinin görüntülenme şeklini değiştirmek için kullanılan bir Angular'a özel yapılarıdr.</p>
+<p>Örneğin bir tarih verisinin belirli bir formatta görüntülenmesini, bir sayısal değerin para şeklinde ifade edilmesini
+    isteyebiliriz.</p>
+<p>İşte bu tarz ihtiyaçlara istinaden, verinin orjinalliğini bozmaksızın sadece görsel kısmında bir makyaj/manipülasyon
+    gerçekleştirmeyi pipe sayesinde gerçekleştirebiliriz</p>
+
+<h2>Hazır Pipe'lar Nelerdir</h2>
+<p>Birçok işlem için built-in olarak tasarlanmış pipe'lar mevcuttur.</p>
+<ul>
+    <li><strong>Currency Pipe: </strong></li>
+    <p>Sayısal değerleri parasal değere dönüştürür. <span ngNonBindable>Kod: {{1000 | currency}}</span> => Çıktı:
+        {{1000 | currency}}</p>
+    <p ngNonBindable>Default Para birimi (appModule altında provide'a eklenir) {{provide: DEFAULT_CURRENCY_CODE,
+        useValue:
+        'TL'}}
+    </p>
+    <p>Pipe'a parametre girerek para birimini değiştirme. <span ngNonBindable>{{1000 | currency : '₺'}}</span> => {{1000
+        | currency : '₺'}}</p>
+
+    <li><strong>DatePipe</strong></li>
+    <p>Tarihsel verileri biçimlendirir. <span ngNonBindable>Kod: {{'25.12.2024' | date : 'parametre'}}</span> => Çıktı:
+        {{today |
+        date}}</p>
+    <ul>
+        <li><strong>fullDate parametresi: </strong> {{today | date : 'fullDate'}}</li>
+        <li><strong>medium parametresi: </strong> {{today | date : 'medium'}}</li>
+        <li><strong>shortTime parametresi: </strong> {{today | date : 'shortTime'}}</li>
+        <li><strong>Ayarlanabilir Format ('mm:ss' parametresi): </strong> {{today | date : 'mm:ss'}}</li>
+    </ul>
+    <li><strong>SlicePipe</strong></li>
+    <p>Dizilerde ki verilere belirli aralıklar ile ulaşılmasını sağlar. Örneğin: Alfabedeki 2. ve 5. elemanlar arası =>
+        <span>{{['a','b','c','d','e','f','g','h','i'] | slice : 2 : 5}}</span>
+    </p>
+    <li><strong>JsonPipe</strong> (json)</li>
+    <p>JSON formatındaki verileri okunabilir hale getirir.</p>
+    <li><strong>UpperCasePipe/LowerCasePipe</strong> (uppercase/lowercase)</li>
+    <p>Metinleri büyük/küçük harfe dönüştürür.</p>
+    <li><strong>PercentPipe</strong> (percent)</li>
+    <p>Sayısal değerleri yüzdelik olarak tanımlar.</p>
+    <li><strong>TitleCasePipe</strong> (titlecase)</li>
+    <p>Her kelimenin baş harfini büyütür.</p>
+    <li><strong>KeyVaulePipe</strong> (keyvalue)</li>
+</ul>
+
+<h2>Custom Pipes</h2>
+<ul>
+    <li><strong>CustomPipe</strong> (custom)</li>
+    <p>bizim oluşturduğumuz pipe</p>
+    <p> Örneğin: {{"Doldur Be Meyhaneci, Boş Kalmasın Kadehim..." | custom : 10 : 19}}</p>
+</ul>
+
+<h2>Pipe'ların Service veya Component'ler de Kullanımı</h2>
+<p>Kullanmak için öncelikle modülün provider ına pipe eklenmelidir. Sonra .ts dosyasında kullanılabilir.</p>
+<p>Örneğin: {{value}}</p>

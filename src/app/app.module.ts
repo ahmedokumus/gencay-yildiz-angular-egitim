@@ -12,11 +12,25 @@ import { ExampleDirective } from './custom-directives/example.directive';
 import { StructuralExampleDirective } from './custom-directives/structural-example.directive';
 import { CustomIfDirective } from './custom-directives/custom-if.directive';
 import { CustomForDirective } from './custom-directives/custom-for.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustomPipe } from './custom-pipes/custom.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DataBindingComponent, InterpolationSyntaxComponent, DirectivesComponent, ExampleDirective, StructuralExampleDirective, CustomIfDirective, CustomForDirective],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    DataBindingComponent,
+    InterpolationSyntaxComponent,
+    DirectivesComponent,
+    ExampleDirective,
+    StructuralExampleDirective,
+    CustomIfDirective,
+    CustomForDirective,
+    PipesComponent,
+    CustomPipe,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [CustomPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
