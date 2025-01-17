@@ -1,0 +1,58 @@
+<h1>forms works!</h1>
+
+<h2>Angular Forms Nedir?</h2>
+<p>
+  Kullanıcılardan veri alabilmek veya kullanıcılarla etkileşime girebilmek için
+  kullanılan yapılardır.
+</p>
+<p>
+  Template-Driven Forms ve Model-Driven/Reactive Forms olmak üzere iki yaklaşım
+  kullanılabilmektedir.
+</p>
+
+<h3>Template-Driven Forms Yaklaşımı</h3>
+<p>Angular Forms yapısını oluşturmanın kolay yoludur.</p>
+<p>
+  Form elemanlarının her biri 'ngModel' direktifi ile işaretleyerek çalışma
+  sergilenmektedir.
+</p>
+
+<h3>Model-Driven/Reactive Forms Yaklaşımı</h3>
+<p>
+  Template-Driven Form'lara nazaran daha karmaşık form işlemleri için uygun olan
+  yaklaşımdır.
+</p>
+<p>
+  Bu yaklaşımda formun temel mantığı component üzerinde bir nesne/object olarak
+  tanımlanır ve bu nesne HTML'de ki ilgili form etiketlerine bind edilir.
+</p>
+
+<h2>Angular Form Konseptleri</h2>
+<p>
+  Angular form yapısında, Template-Driven Form veya Model-Driven Form
+  yaklaşımlarından hangisini kullanılıp kullanılmadığına bakılmaksızın üç ana
+  yapıtaşı mevcuttur.
+</p>
+<p>FormGroup - FormArray - FormControl - FormBuilder</p>
+
+<h3>FormGroup</h3>
+<p>
+  Bir form içerisinde bulunan bir grup kontrolü temsil eder. Bir başka deyişle
+  formun kendisini temsil eder. İçerisinde Form Control nesneleri barındırır.
+</p>
+<h3>FormArray</h3>
+<p>
+  Form içerisinde dinamik olarak oluşturulan kontrolleri temsil eden dizisel
+  nesnedir
+</p>
+<h3>FormControl</h3>
+<p>
+  Form içerisinde bulunan, kullanıcıdan veri almamızı sağlayacak olan tek bir
+  kontrolü temsil eder.
+</p>
+<h3>FormBuilder</h3>
+<p>
+  FormGroup, FormControl ve FormArray nesnelerini oluşturmamızı kolaylaştıracak
+  olan bir servistir. İçerisindeki hazır fonksiyonlar sayesinde formu hızlıca
+  üretebilmemizi ve konfigure etmemizi sağlar.
+</p>

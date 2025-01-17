@@ -31,6 +31,7 @@ import { AfterContentCheckedComponent } from './life-cycle-hook/after-content-ch
 import { AfterViewInitComponent } from './life-cycle-hook/after-view-init/after-view-init.component';
 import { AfterViewCheckedComponent } from './life-cycle-hook/after-view-checked/after-view-checked.component';
 import { OnDestroyComponent } from './life-cycle-hook/on-destroy/on-destroy.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { OnDestroyComponent } from './life-cycle-hook/on-destroy/on-destroy.comp
     AfterViewInitComponent,
     AfterViewCheckedComponent,
     OnDestroyComponent,
+    FormsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CustomPipe],
