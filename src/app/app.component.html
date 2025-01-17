@@ -1,9 +1,15 @@
 <h1>Components</h1>
 <ul>
-  <li>Angular uygulamalarında component'ler uygulamanın mühim parçası olan yapılanmalarından biridir.</li>
-  <li>Genellikle angular uygulamasında component'lerin görevi sayfa altyapıları olarak kullanılmalarıdır. Bunun dışında
-    sayfa olarak kullanılan coponent'lerin alt component'leri olarakta kullanılabilmektedir ve böylece partial
-    mantığında sayfaları geliştirmemize imkan verir.</li>
+  <li>
+    Angular uygulamalarında component'ler uygulamanın mühim parçası olan
+    yapılanmalarından biridir.
+  </li>
+  <li>
+    Genellikle angular uygulamasında component'lerin görevi sayfa altyapıları
+    olarak kullanılmalarıdır. Bunun dışında sayfa olarak kullanılan
+    coponent'lerin alt component'leri olarakta kullanılabilmektedir ve böylece
+    partial mantığında sayfaları geliştirmemize imkan verir.
+  </li>
 </ul>
 <h2>Component'in Bileşenleri Nelerdir?</h2>
 <ul>
@@ -11,22 +17,31 @@
     <strong>Template</strong>
     <ul>
       <li>Component'in görsel çalışmalarının yapıldığı parçasıdır.</li>
-      <li>İçerisinde HTML kodunun eşliğinde directive ve pipe gibi özel angular elemanları ve Data Binding davranışları
-        kullanılabilmektedir.</li>
+      <li>
+        İçerisinde HTML kodunun eşliğinde directive ve pipe gibi özel angular
+        elemanları ve Data Binding davranışları kullanılabilmektedir.
+      </li>
       <ul>
-        <li>{{title}}</li>
-        <li>{{3 | currency}}</li>
+        <li>{{ title }}</li>
+        <li>{{ 3 | currency }}</li>
       </ul>
-      <li>Componentler'i .html dosyasına karşılık gelmektedir ve component ile 'templateUrl' field'ı üzerinden
-        ilişkilendirilmektedir.</li>
-      <li>Eğer ki teplate işlemlerini fiziksel olarak ayrı bir dosyada gerçekleştirmek yerine .ts dosyası içerisinde
-        gerçekleştirmek istiyorusak 'template' field'ına karşılıkta çalışma yapabiliriz</li>
+      <li>
+        Componentler'i .html dosyasına karşılık gelmektedir ve component ile
+        'templateUrl' field'ı üzerinden ilişkilendirilmektedir.
+      </li>
+      <li>
+        Eğer ki teplate işlemlerini fiziksel olarak ayrı bir dosyada
+        gerçekleştirmek yerine .ts dosyası içerisinde gerçekleştirmek
+        istiyorusak 'template' field'ına karşılıkta çalışma yapabiliriz
+      </li>
     </ul>
   </li>
   <li>
     <strong>Style</strong>
     <ul>
-      <li>Component'in css, scss vs. gibi hangi style türü seçildiyse ilgili çalışmaların yapıldığı tasarım parçasıdır.
+      <li>
+        Component'in css, scss vs. gibi hangi style türü seçildiyse ilgili
+        çalışmaların yapıldığı tasarım parçasıdır.
       </li>
       <li>steylesUrl fieldı üzerinden component ile ilişkilendirilir.</li>
     </ul>
@@ -35,19 +50,27 @@
     <strong>Component Class</strong>
     <ul>
       <li>Component'in merkezi ve esas unsurudur.</li>
-      <li>Tüm JavaScript, TypeScript ve jQuery işlemleri bu parça üzerinde gerçekleçtirilir ve component içerisinde
-        kullanılacak değişkenlerle birlikte fonksiyonlar bu sınıf üzerinde tanımlanır.</li>
-      <li>Verilerin nasıl görüntüleneceği, fonksiyonların nasıl işleyeceği vs. gibi işlevsellikler bu sınıf tarafından
-        yönetilir.</li>
+      <li>
+        Tüm JavaScript, TypeScript ve jQuery işlemleri bu parça üzerinde
+        gerçekleçtirilir ve component içerisinde kullanılacak değişkenlerle
+        birlikte fonksiyonlar bu sınıf üzerinde tanımlanır.
+      </li>
+      <li>
+        Verilerin nasıl görüntüleneceği, fonksiyonların nasıl işleyeceği vs.
+        gibi işlevsellikler bu sınıf tarafından yönetilir.
+      </li>
     </ul>
   </li>
   <li>
     <strong>Selector</strong>
     <ul>
-      <li>Component'in selector özelliği, ilgili component'in uygulamanın herhangi bir noktasında nasıl çalışacağını
-        tanımlayan bir referans özelliğidir.</li>
       <li>
-        Sadece HTML dosyasında kullanılan bir etiket ile component'in çalıştırılmasını sağlar.
+        Component'in selector özelliği, ilgili component'in uygulamanın herhangi
+        bir noktasında nasıl çalışacağını tanımlayan bir referans özelliğidir.
+      </li>
+      <li>
+        Sadece HTML dosyasında kullanılan bir etiket ile component'in
+        çalıştırılmasını sağlar.
       </li>
       <li><app-home></app-home></li>
       <li>selector sayesinde home component'i yukarıda çağırdık</li>
@@ -56,21 +79,29 @@
   <li>
     <strong>Meta Data</strong>
     <ul>
-      <li>Component'in nasıl yapılandırılacağını ve nasıl kullanılacağını tanımlayan bir decorator'dur</li>
+      <li>
+        Component'in nasıl yapılandırılacağını ve nasıl kullanılacağını
+        tanımlayan bir decorator'dur
+      </li>
     </ul>
   </li>
 </ul>
 <h2>Component Oluşturma</h2>
 <p>ng generate/g component/c [componante name]</p>
-<h2>Oluşturulan Component'in Uygulamada Kullanılabilir Olması İçin Nereye Tanımlanması Gerekiyor</h2>
+<h2>
+  Oluşturulan Component'in Uygulamada Kullanılabilir Olması İçin Nereye
+  Tanımlanması Gerekiyor
+</h2>
 <p>Ana Modülün declaration'una</p>
-<hr>
+<hr />
 <app-data-binding></app-data-binding>
-<hr>
+<hr />
 <app-interpolation-syntax></app-interpolation-syntax>
-<hr>
+<hr />
 <app-directives></app-directives>
-<hr>
+<hr />
 <app-pipes></app-pipes>
-<hr>
+<hr />
 <app-component-communication></app-component-communication>
+<hr />
+<app-life-cycle-hook></app-life-cycle-hook>

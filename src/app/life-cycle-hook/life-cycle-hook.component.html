@@ -1,0 +1,79 @@
+<h1>life-cycle-hook works!</h1>
+
+<p>
+  Bir angular component'inin oluşturulduğu andan itibaren silindiği/imha
+  edildiği ana kadar ki süreçte belirli noktalarda çalıştırılması için
+  tasarlanmış olan davranışsal metotları ifade etmektedir.
+</p>
+
+<p>
+  Bu metotlar; uygulamanın kullanımı sürecinde, component'in ver güncellemesi,
+  DOM ile etkileşime girmesi veyahut tkip eden verilerdeki değişimler gibi
+  görevleri yerine getirmenize yardımcı olabilirler.
+</p>
+
+<p>
+  Her metot, component'in farklı aşamalarında çalışır ve birbirinden farklı
+  görevleri yerine getirir.
+</p>
+
+<h2>ngOnChanges</h2>
+<p>
+  Component'in Input değişkenleri selector referansı üzerinden değiştiği
+  durumlarda tetiklenir.
+</p>
+<p>OnChanges interface'i ile uygulanabilir</p>
+
+<app-on-changes data="Merhaba"></app-on-changes>
+
+<h2>ngOnInit</h2>
+<p>
+  Component ilk kez oluşturulduğunda tetiklenir. OnInit interface'i ile
+  uygulanabilir.
+</p>
+<app-on-init></app-on-init>
+
+<h2>ngDoCheck</h2>
+<p>
+  Angular, component'in güncellenmesi durumunda sık sık bu metodu
+  tetiklemektedir.
+</p>
+<p>DoCheck interface'i ile uygulanabilir.</p>
+<p>
+  Not: AyrıcaDoCheck'in, component'in change detection döngüsünde çalıştığı
+  bilinse iyi olur.
+</p>
+<app-do-check></app-do-check>
+
+<h2>ngAfterContentInit</h2>
+<p>
+  Component'in içeriği yüklendikten sonra tetiklenir. AfterContentInit
+  interface'i ile uygulanabilir.
+</p>
+<app-after-content-init></app-after-content-init>
+
+<h2>ngAfterContentChecked</h2>
+<p>
+  Component'in içeriği güncellendikten sonra tetiklenir. AfterContentChecked
+  interface'i ile uygulanabilir.
+</p>
+<app-after-content-checked></app-after-content-checked>
+
+<h2>ngAfterViewInit</h2>
+<p>
+  Component'in view'i yüklendikten sonra tetiklenir. AfterViewInit interface'i
+  ile uygulanabilir.
+</p>
+<app-after-view-init></app-after-view-init>
+
+<h2>ngAfterViewChecked</h2>
+<p>
+  Component'in view'i güncellendikten sonra tetiklenir. AfterViewChecked
+  interface'i ile uygulanabilir.
+</p>
+<app-after-view-checked></app-after-view-checked>
+
+<h2>ngOnDestroy</h2>
+<p>Component'in kaldırılması/silinmesi durumunda tetiklenir.</p>
+<p>OnDestroy interface'i ile uygulanabilir.</p>
+<app-on-destroy></app-on-destroy>

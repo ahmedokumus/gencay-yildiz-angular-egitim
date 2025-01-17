@@ -22,6 +22,15 @@ import { ChildComponent as ChildComponent2 } from './component-communication/chi
 import { Parent3Component } from './component-communication/child-to-child/parent3/parent3.component';
 import { Child3aComponent } from './component-communication/child-to-child/child3a/child3a.component';
 import { Child3bComponent } from './component-communication/child-to-child/child3b/child3b.component';
+import { LifeCycleHookComponent } from './life-cycle-hook/life-cycle-hook.component';
+import { OnChangesComponent } from './life-cycle-hook/on-changes/on-changes.component';
+import { OnInitComponent } from './life-cycle-hook/on-init/on-init.component';
+import { DoCheckComponent } from './life-cycle-hook/do-check/do-check.component';
+import { AfterContentInitComponent } from './life-cycle-hook/after-content-init/after-content-init.component';
+import { AfterContentCheckedComponent } from './life-cycle-hook/after-content-checked/after-content-checked.component';
+import { AfterViewInitComponent } from './life-cycle-hook/after-view-init/after-view-init.component';
+import { AfterViewCheckedComponent } from './life-cycle-hook/after-view-checked/after-view-checked.component';
+import { OnDestroyComponent } from './life-cycle-hook/on-destroy/on-destroy.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +53,15 @@ import { Child3bComponent } from './component-communication/child-to-child/child
     Parent3Component,
     Child3aComponent,
     Child3bComponent,
+    LifeCycleHookComponent,
+    OnChangesComponent,
+    OnInitComponent,
+    DoCheckComponent,
+    AfterContentInitComponent,
+    AfterContentCheckedComponent,
+    AfterViewInitComponent,
+    AfterViewCheckedComponent,
+    OnDestroyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CustomPipe],
